@@ -14,10 +14,7 @@ You need to prepare:
 
 ## Documents & Guides 
 
-You can download the document or open readme.md of each folder to read the full guide of each part.
-## Switch to another file
-
-All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree. This repo contains guide of:
+You can download the document or open readme.md of each folder to read the full guide of each part. This repo contains several guides, there are:
 
 - VM preparation
 - VM configuration
