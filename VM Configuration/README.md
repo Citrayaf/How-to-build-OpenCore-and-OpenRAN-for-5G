@@ -28,8 +28,7 @@ If you miss the OS installation part, you can manually choose from Settings > St
   
   
 
-[![2](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/2.png =400x250)
-](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/2.png)
+![2](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/2.png?raw=true)
 
   
   
@@ -43,14 +42,13 @@ If you miss the OS installation part, you can manually choose from Settings > St
   
   
 
-[![3](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/3.png =400x250)
-](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/3.png)
+![3](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/3.png?raw=true)
+
 
   
   
 
-[![4](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/4.png =400x250)
-](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/4.png)
+![4](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/4.png?raw=true)
 
   
   
@@ -60,8 +58,8 @@ If you miss the OS installation part, you can manually choose from Settings > St
   
   
 
-[![5](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/5.png =400x250)
-](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/5.png)
+![5](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/5.png?raw=true)
+
 
   
   
@@ -71,11 +69,9 @@ If you miss the OS installation part, you can manually choose from Settings > St
   
   
 
-[![6](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/6.png =400x250)
-](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/6.png)
+![6](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/6.png?raw=true)
 
   
   
 
-[![7](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/7.png =400x250)
-](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/7.png)
+![7](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/7.png?raw=true)
