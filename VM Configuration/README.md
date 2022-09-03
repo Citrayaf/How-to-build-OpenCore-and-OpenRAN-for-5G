@@ -15,7 +15,7 @@ First, you need to install virtualbox and download linux Ubuntu version 18.04.6 
 
   
 
-![1](/Pictures/1.png =400x250)
+![1](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/1.png?raw=true)
   
   
 
