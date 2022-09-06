@@ -19,7 +19,9 @@ cp /home/core5gs[VM’s name]/open5gs/build/configs/sample.yaml /home/ core5gs[V
 cd /home/core5gs/open5gs/build/configs
 nano sample.yaml [To open, view, and edit the file]
 ```
+
 ![20](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/20.png?raw=true)
+
 Change this parameter to:
 ```Linux
 amf:
@@ -31,7 +33,9 @@ amf:
 ```
 
 Then, I tried to change some others parameters in core with this parameter:
+
 ![21](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/21.png?raw=true)
+
 You can try to modify these parameter as you want:  **PLMN ID**  consist of  **MCC**  (country region for Indonesia) and  **MNC**  (Service provider’s unique code),  **TAC**  (Type Allocation Code), and  **S-NSSAI**  (Single Network Slice Selection Assistance Information) this parameter is new param in 5G core consist of Consist of Slice/Service type (**SST**) and Slice Differentiator (**SD**). These three parameter are important parameter for integration between Core, HSS database, gNb, and UE (Simcard).
 
 ## UERANSIM Configuration
@@ -48,14 +52,18 @@ nano virtualbox_open5gs-gnb.yaml
 ```
 
 · First, put in the IP of this VM:
+
 ![23](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/23.png?raw=true)
+
 ```Linux
 linkIp: 10.14.2.6
 ngapIp: 10.14.2.6
 gtpIp: 10.14.2.6
 ```
 Use IP from interface enp0s3, you can see it from ifconfig
+
 ![22](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/22.png?raw=true)
+
 · In the same file as before, change the IP of the AMF in file same as the Open5Gs NGAP IP:
 ```Linux
 amfConfigs:
@@ -74,7 +82,9 @@ nano config/virtualbox_open5gs-ue.yaml
 ```
 
 · In this file, you need to change the gNb IP configuration in this UE’s part. So, UE can connect to gNb:
+
 ![24](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/24.png?raw=true)
+
 ```Linux
 gnbSearchList:
 	- 10.14.2.6
@@ -86,7 +96,9 @@ This IP represent the gNb’s IP, which is ip from interface enp0s3
 ```Linux
 nano config/virtualbox_open5gs-ue.yaml
 ```
+
 ![27](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/27.png?raw=true)
+
 which should by default contain the following pieces of information:
 ```Linux
 imsi: 510140000000001
@@ -101,6 +113,9 @@ You should configure these parameters same as parameters in HSS, so the attach p
 cd /home/core5gs/open5gs/webui
 npm run dev
 ```
+
 ![25](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/25.png?raw=true)
+
 Open Mozilla Firefox open localhost:3000
+
 ![26](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/26.png?raw=true)
