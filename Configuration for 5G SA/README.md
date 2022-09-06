@@ -7,6 +7,7 @@ sudo apt install net-tools
 ifconfig
 ```
 ![19](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/19.png?raw=true)
+
 IP in interface enp0s3 (10.14.2.10) will be used for next configuration
 
 · Make a backup of the Open5Gs original configuration:
