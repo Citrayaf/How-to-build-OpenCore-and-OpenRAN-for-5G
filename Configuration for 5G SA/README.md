@@ -8,7 +8,7 @@ ifconfig
 ```
 ![19](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/19.png?raw=true)
 
-IP in interface enp0s3 (10.14.2.10) will be used for next configuration
+IP in interface enp0s3 (10.14.2.10) will be used for the next configuration
 
 · Make a backup of the Open5Gs original configuration:
 ```Linux
@@ -26,21 +26,21 @@ nano sample.yaml [To open, view, and edit the file]
 Change this parameter to:
 ```Linux
 amf:
-	sbi:
-	  - addr: 127.0.0.5
-	    port: 7777
-	ngap:
-	  - addr: 10.14.2.10 [IP from interface enp0s3]
+ sbi:
+ - addr: 127.0.0.5
+ port: 7777
+ ngap:
+ - addr: 10.14.2.10 [IP from interface enp0s3]
 ```
 
-Then, I tried to change some others parameters in core with this parameter:
+Then, I tried to change some other parameters in the core with this parameter:
 
 ![21](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/21.png?raw=true)
 
-You can try to modify these parameter as you want:  **PLMN ID**  consist of  **MCC**  (country region for Indonesia) and  **MNC**  (Service provider’s unique code),  **TAC**  (Type Allocation Code), and  **S-NSSAI**  (Single Network Slice Selection Assistance Information) this parameter is new param in 5G core consist of Consist of Slice/Service type (**SST**) and Slice Differentiator (**SD**). These three parameter are important parameter for integration between Core, HSS database, gNb, and UE (Simcard).
+You can try to modify these parameters as you want: **PLMN ID** consists of **MCC** (country region for Indonesia) and **MNC** (Service provider’s unique code), **TAC** (Type Allocation Code), and **S-NSSAI** (Single Network Slice Selection Assistance Information) this parameter is new in 5G core consist of Slice/Service type (**SST**) and Slice Differentiator (**SD**). These three parameters are important parameters for integration between Core, HSS database, gNb, and UE (Simcard).
 
 ## UERANSIM Configuration
-· Go to config directory and create a copy of the configs:
+· Go to the config directory and create a copy of the configs:
 ```Linux
 cd /home/ueran/UERANSIM/config
 cp open5gs-gnb.yaml virtualbox_open5gs-gnb.yaml
@@ -65,11 +65,11 @@ Use IP from interface enp0s3, you can see it from ifconfig
 
 ![22](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/22.png?raw=true)
 
-· In the same file as before, change the IP of the AMF in file same as the Open5Gs NGAP IP:
+· In the same file as before, change the IP of the AMF in the file same as the Open5Gs NGAP IP:
 ```Linux
 amfConfigs:
-	- address: 10.14.2.10
-	  port: 38412
+ - address: 10.14.2.10
+ port: 38412
 ```
 
 · Start to build the gNb with our adjusted config file:
@@ -88,10 +88,10 @@ nano config/virtualbox_open5gs-ue.yaml
 
 ```Linux
 gnbSearchList:
-	- 10.14.2.6
+ - 10.14.2.6
 ```
 
-This IP represent the gNb’s IP, which is ip from interface enp0s3
+This IP represent the gNb’s IP, which is IP from interface enp0s3
 
 · Finally, we need to register the UE in the core network. You can access and edit the required information from the UE configuration file, by using this command:
 ```Linux
@@ -109,7 +109,7 @@ USIM: OPc
 Operator Key: E8ED289DEBA952E4283B54E88E6183CA
 ```
 
-You should configure these parameters same as parameters in HSS, so the attach process can be successfully accepted. Run the HSS via webUI in open5gs VM using this command:
+You should configure these parameters the same as parameters in HSS, so the attach process can be successfully accepted. Run the HSS via webUI in open5gs VM using this command:
 ```Linux
 cd /home/core5gs/open5gs/webui
 npm run dev
@@ -120,3 +120,4 @@ npm run dev
 Open Mozilla Firefox open localhost:3000
 
 ![26](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/26.png?raw=true)
+

@@ -4,20 +4,20 @@
 
 a) Turn on the core5g VM (VM where you installed open5gs).
 
-b) Open the terminal, then change to root user by using this command:
+b) Open the terminal, then change to the root user by using this command:
 ```Linux
 sudo -i
 ```
-if already change to root user, before @ will be seen as root
+if already change to the root user, before @ will be seen as the root
 
 ![28](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/28.png?raw=true)
 
-c) Everytime turn on the core5g VM you need to execute this script for the core internal routing. By using this command:
+c) every time turn on the core5g VM you need to execute this script for the core internal routing. By using this command:
 ```Linux
 cd /home/core5g[VM’s name]/open5gs
 sudo ./misc/netconf.sh [after executing this command there will be no output, but it’s okay]
 ```
-d) Then execute this command to run all open5gs program:
+d) Then execute this command to run all open5gs programs:
 ```Linux
 cd /home/core5g/open5gs/build/tests/app/ && ./app
 ```
@@ -28,9 +28,9 @@ e) After all programs can be successfully run like this picture below, it means 
 
 ![29](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/29.png?raw=true)
 
-[Additional] To add and see SIM card information on HSS database
+[Additional] To add and see SIM card information on the HSS database
 
-a) Open new tab on terminal, then change the user to root.
+a) Open a new tab on the terminal, then change the user to root.
 
 b) Run this command below:
 ```Linux
@@ -41,14 +41,14 @@ c) If already appeared this message, it means the database already running succe
 
 ![30](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/30.png?raw=true)
 
-d) Then you can open Mozilla Firefox and go to link [http://localhost:3000](http://localhost:3000/) , then login using this:
+d) Then you can open Mozilla Firefox and go to link [http://localhost:3000](http://localhost:3000/), then log in using this:
 
 ![31](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/31.png?raw=true)
 
 Username: admin
 Password: 1423
 
-e) After you successfully login, you can see the SIMcard database or add new SIMcard database.
+e) After you successfully log in, you can see the SIMcard database or add a new SIMcard database.
 
 ![26](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/26.png?raw=true)
 
@@ -56,7 +56,7 @@ e) After you successfully login, you can see the SIMcard database or add new SIM
 
 **RAN**
 
-a) Turn on ueran VM, then open terminal.
+a) Turn on the ueran VM, then open the terminal.
 
 b) Change the user to root by using this command:
 ```Linux
@@ -68,7 +68,7 @@ cd /home/ueran/UERANSIM/
 ./build/nr-gnb -c config/virtualbox_open5gs-gnb.yaml
 ```
 
-d) Check in the ueran’s terminal and core5g’s terminal. If this message below appears, it means gNb to core already connected. This below message from ueran’s terminal
+d) Check in the ueran’s terminal and core5g’s terminal. If this message below appears, it means gNb to core already connected. The below message from ueran’s terminal
 
 ![32](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/32.png?raw=true)
 
@@ -78,7 +78,7 @@ and this message below from core5g’s terminal
 
 **UE**
 
-e) Open new terminal tab, and change the user to root.
+e) Open a new terminal tab, and change the user to root.
 
 f) Change the path, the execute this command:
 ```Linux
@@ -88,7 +88,7 @@ cd /home/ueran/UERANSIM/build
 
 This command simulates one UE trying to attach to the BTS.
 
-g) Check the message in the current ueran’s terminal. “Connection setup for PDU session[1] is successful, TUN interface …”, it means the UE has already successfully attached to the gNb and can get service from the core side.
+g) Check the message in the current ueran’s terminal. “Connection setup for PDU session[1] is successful, TUN interface …”, means the UE has already successfully attached to the gNb and can get service from the core side.
 
 ![34](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/34.png?raw=true)
 
@@ -98,10 +98,10 @@ Message from ueran’s terminal for gNb
 
 Message from core5g’s terminal
 
-h) You can try to test the UE service by trying to do ping from UE. First, you need to open new terminal tab, then execute this command:
+h) You can try to test the UE service by trying to do a ping from UE. First, you need to open a new terminal tab, then execute this command:
 ```Linux
 sudo -i
-cd /home  /ueran/UERANSIM/build
+cd /home /ueran/UERANSIM/build
 ./nr-binder 10.45.0.2 [UE’s IP assigned from core] ping google.com
 ```
 
@@ -113,7 +113,7 @@ Check the UE’s IP from this message below
 
 [Signalling Trace]
 
-If you want to know the signalling trace between core to gNb or gNb to UE, you just need to open new terminal tab, change the user to root, then type “wireshark” and press enter. Wireshark needs to be opened in both VMs, so you can see signalling trace from the both side.
+If you want to know the signalling trace between core to gNb or gNb to UE, you just need to open a new terminal tab, change the user to root, then type “wireshark” and press enter. Wireshark needs to be opened in both VMs, so you can see signalling trace from both sides.
 
 Sigtrace Example:
 
@@ -146,7 +146,7 @@ For reference, the signalling flow 5G SA is like this:
 ![40](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/5G-SA-Flow.png?raw=true)
 
 
-**Congratulations!** You have successfully set up and simulated 5G SA simulation from UE to the 5GC. If you want to explore more features beyond this document, you can open these two links:
+**Congratulations!** You have successfully set up and simulated 5G SA simulation from UE to 5GC. If you want to explore more features beyond this document, you can open these two links:
 
 [https://kkohls.org/guides_open5gs.html](https://kkohls.org/guides_open5gs.html)
 
