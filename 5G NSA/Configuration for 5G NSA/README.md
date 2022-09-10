@@ -2,6 +2,7 @@
 
 ## Open5Gs
 1.Open5Gs VM, then change user to root.
+
 2.Install the required libraries with this command:
 ```Linux
 cd /home/core5g/open5gs/build/configs

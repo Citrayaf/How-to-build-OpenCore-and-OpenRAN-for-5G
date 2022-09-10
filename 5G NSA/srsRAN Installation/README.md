@@ -3,10 +3,12 @@
 This srsRAN installation guide is based on srsRAN installation with ZMQ Virtual Radio scenario from this link:
 [https://docs.srsran.com/en/latest/app_notes/source/zeromq/source/index.html](https://docs.srsran.com/en/latest/app_notes/source/zeromq/source/index.html)
 1.First you need to make a new VM (ex: VM’s name is srs) with the specification same as for core5g & ueran, then set up the VM’s network configuration same as core5g & ueran
+
 2.Install the required libraries with this command:
 ```Linux
 sudo apt-get install build-essential cmake libfftw3-dev libmbedtls-dev libboost-program-options-dev libconfig++-dev libsctp-dev libtool autoconf automake
 ```
+
 3.Install the ZeroMQ development libraries installation can be installed with:
 ```Linux
 cd /home/srs/
@@ -18,6 +20,7 @@ make
 sudo make install
 sudo ldconfig
 ```
+
 4.Then you need to install czmq, by using this command:
 ```Linux
 git clone https://github.com/zeromq/czmq.git
@@ -28,6 +31,7 @@ make
 sudo make install
 sudo ldconfig
 ```
+
 5.Finally, you need to compile srsRAN (assuming you have already installed all the required dependencies). By using this command:
 ```Linux
 git clone https://github.com/srsRAN/srsRAN.git
