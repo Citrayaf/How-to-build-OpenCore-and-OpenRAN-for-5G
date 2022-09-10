@@ -4,11 +4,13 @@ In this guide I integrate srsRAN with Open5gs, you can also simulate 5G NSA usin
 https://docs.srsran.com/en/latest/getting_started.html
 
 1.Turn on core5g VM, then change the user to root
+
 2.Launch the open5gs with this command:
 ```Linux
 cd /home/core5g/open5gs/build/tests/app/ && ./app
 ```
 3.Turn on the srs VM, then change the user to root
+
 4.Launch the eNodeB by using this command:
 ```Linux
 cd /home/srs/srsRAN/build

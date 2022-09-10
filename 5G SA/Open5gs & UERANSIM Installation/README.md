@@ -13,20 +13,24 @@ You need to know in this simulation, for the open5gs I still run this program us
  ```Linux
  sudo -i
  [insert your password]
+ ```
  - Update the VM using this command:
  ```Linux
  sudo apt update
+ ```
  - Install and enable MongoDB:
  ```Linux
  sudo apt install mongodb
  sudo systemctl start mongodb
  sudo systemctl enable mongodb 
  [this command to make MongoDB run every time you turn on the VM]
+ ```
  - Install requirements:
  ```Linux
  sudo apt install python3-pip python3-setuptools python3-wheel ninja-build build-essential flex bison git libsctp-dev libgnutls28-dev libgcrypt-dev libssl-dev libidn11-dev libmongoc-dev libbson-dev libyaml-dev libnghttp2-dev libmicrohttpd-dev libcurl4-gnutls-dev libnghttp2-dev libtins-dev meson libtalloc-dev cppcheck clang-tidy libsocket++1 python3-dev libbsd-arc4random-perl libkqueue-dev libssl-dev socket
  sudo update
  sudo upgrade
+ ```
  - Build Open5Gs from sources
  ```Linux
  cd /home/[VM's name]
@@ -37,9 +41,11 @@ You need to know in this simulation, for the open5gs I still run this program us
  --prefix=pwd/install 
  ```
  ![1](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/8.png?raw=true) 
+
  ```Linux
  ninja -C build
  ```
+
  ![1](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/9.png?raw=true)
 
  - Run this command for the internal IP configuration
@@ -50,20 +56,30 @@ You need to know in this simulation, for the open5gs I still run this program us
  ```Linux
  ./build/tests/attach/attach
  ```
+
  ![10](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/10.png?raw=true)
+
  ```Linux
  ./build/tests/registration/registration
  ``` 
- ![11](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/11.png?raw=true)[This is okay, from acetcom the one who make this repo said that this is a bug, in my case, I just ignore and continue to the next step. All functions still work fine]
+
+ ![11](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/11.png?raw=true)
+ 
+ [This is okay, from acetcom the one who make this repo said that this is a bug, in my case, I just ignore and continue to the next step. All functions still work fine]
+
  ```Linux 
  ninja -C build test
  ```
+
  ![12](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/12.png?raw=true)
+ 
  ```Linux 
  cd build 
  meson test -v
  ```
+
  ![13](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/13.png?raw=true)
+ 
  ```Linux 
  ninja install
  ```
@@ -71,6 +87,7 @@ You need to know in this simulation, for the open5gs I still run this program us
  ![14](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/14.png?raw=true)
 
  - Next, we will install the WebUI for user registration in HSS. Using this command:
+
  ```Linux
  cd ../..
  sudo apt install curl
@@ -79,23 +96,32 @@ You need to know in this simulation, for the open5gs I still run this program us
  cd open5gs/webui/
  npm ci --no-optional
  ```
+
  ![15](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/15.png?raw=true)
+
  - Congrats! You have finished the Open5Gs installation
+
  2. UERANSIM Installation
  - Make a new VM for UERANSIM, do it like in the VM preparation step and for VM network configuration you can start from step **d**.
  - Build UERANSIM from sources
+
  ```Linux
  sudo apt install git make gcc g++ libsctp-dev lksctp-tools iproute2
  sudo apt install snap
  sudo snap install cmake --classic
  ```
+
  ![16](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/16.png?raw=true) 
+
  - Get the sources and build:
+
  ```Linux
  git clone https://github.com/aligungr/UERANSIM
  cd UERANSIM
  make 
  ```
+
  ![18](https://github.com/Citrayaf/How-to-build-OpenCore-and-OpenRAN-for-5G/blob/main/Pictures/18.png?raw=true)
+ 
  - Congrats! You have successfully installed UERANSIM.
 
