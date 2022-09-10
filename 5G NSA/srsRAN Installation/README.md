@@ -2,6 +2,7 @@
 
 This srsRAN installation guide is based on srsRAN installation with ZMQ Virtual Radio scenario from this link:
 [https://docs.srsran.com/en/latest/app_notes/source/zeromq/source/index.html](https://docs.srsran.com/en/latest/app_notes/source/zeromq/source/index.html)
+
 1.First you need to make a new VM (ex: VM’s name is srs) with the specification same as for core5g & ueran, then set up the VM’s network configuration same as core5g & ueran
 
 2.Install the required libraries with this command:
