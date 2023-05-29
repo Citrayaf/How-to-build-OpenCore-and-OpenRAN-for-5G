@@ -29,7 +29,7 @@ You need to prepare:
 
 - Linux Ubuntu version 18.04
 
-- High Spec computer or server, so can handle three VMs with each of it having a minimum 4Gb RAM & memory with 70 Gb.
+- High Spec computer or server, so can handle three VMs with each of it having a minimum 16Gb RAM & memory with 70 Gb.
 
   
 
